@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: atluofu-ddc-test
+
+atluofu:
+  dynamic:
+    config:
+      center:
+        enabled: true
+        system: test-system
+        namespace: dev
+        key-prefix: atluofu:ddc
+        create-missing: true
+        fail-fast: true
+        redis:
+          address: redis://127.0.0.1:6379
+          database: 0
+          connection-pool-size: 16
+          connection-minimum-idle-size: 4
+          timeout: 3000
